@@ -7,3 +7,9 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+
+
+let arr = [1, 2, 3, 4, 5]
+
+arr.sort((a, b) => a - b)
