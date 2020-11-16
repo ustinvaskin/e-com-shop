@@ -18,4 +18,4 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => ( // ma
   </div>
 );
 
-export default withRouter(MenuItem); // import with withRouter
+export default withRouter(MenuItem); // export with withRouter
