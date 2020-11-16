@@ -4,9 +4,11 @@ import MenuItem from '../menu-item/menu-item.component';
 
 import './directory.styles.scss';
 
-function Directory (){
+class Directory extends React.Component {
+  constructor() {
+    super();
 
- const data = {
+    this.state = {
       sections: [
         {
           title: 'hats',
@@ -23,7 +25,7 @@ function Directory (){
         {
           title: 'sneakers',
           imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-          id: 3, 
+          id: 3,
           linkUrl: ''
         },
         {
@@ -42,15 +44,17 @@ function Directory (){
         }
       ]
     };
+  }
 
+  render() {
     return (
       <div className='directory-menu'>
-        {data.sections.map(({ id, ...otherSectionProps }) => (
-          <MenuItem key={id} {...otherSectionProps} /> // passing all props
+        {this.state.sections.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
         ))}
       </div>
     );
   }
-
+}
 
 export default Directory;
